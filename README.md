@@ -9,11 +9,11 @@
 3.	可以使用文本框与GPT直接交互；
 4.	每日荐股。
 # 具体细节
-## 股票信息查询
+## 股票信息爬虫（GetStock.cpp）
 爬虫实现。使用QNetwork库函数爬取指定网址源代码，然后用正则表达式提取关键词实现信息爬取。
-## 持仓信息离线保存
+## 持仓信息离线保存(SQLStock.cpp)
  使用的数据库实现（SQLite），将爬取的股票数据保存到数据库中，从而实现离线保存。其中修改持仓信息使用数据库基础语法（创建、修改、删除）等实现。
-## AI模型
+## AI模型（Core.cpp）
 ### GPT-4o
 比较基础的调用OpenAI官方API
 ### FinAssistant
@@ -35,7 +35,8 @@ https://github.com/ymcui/Chinese-LLaMA-Alpaca）
 https://github.com/ggerganov/llama.cpp）
 在部署Llama-3时候，我们同样发现市面上的教程基本全都是基于Linux系统或MacOS实现，跟Windows实现差异较大（可能只有我们这种小白会用Windows部署😂），之后可能会做一个windows部署的教程
 
-
+## 股市走势展示（Get_Url_Pic.cpp）
+先调用ScreenShot API抓取源网页截屏保存到本地，再用QPixMap截取指定位置的图片，呈现在UI上
 
 # 代码结构
 ```mermaid
@@ -84,7 +85,7 @@ FinAssistant基于GPT-4-Turbo微调，加入了股票专业知识；GPT-4o使用
 ![GPT-4o](/imgs/2024-05-18/13pcFtP99S6wFdhS.png)
 以上是在同样的prompt下，两个模型的回答，可以看到，GPT-4o有明显事实性错误，FinAssistant在知识库加持下更加准确严谨
 # 核心代码解释部分
-## 股票信息爬虫（GetStock）
+## 股票信息爬虫（GetStock.cpp）
 股票爬虫部分共有
 ```C++
 void getHttpData(const QString&modelUrl,QByteArray & data); 
@@ -185,7 +186,7 @@ void Search::on_pushButton_3_clicked()
     ui->stockrateoutput->append("/"+m->urlList3[0]);
 }
 ```
-## SQLite数据库处理股票信息（SQLStock）
+## SQLite数据库处理股票信息（SQLStock.cpp）
 对于股票信息数据处理，使用SQLite完成了以下函数
 ```C++
 //初始化数据库
@@ -301,7 +302,7 @@ void insertStockData(const QString &stockname, const QString &stocknumber, doubl
 //其他函数实现方法与上类似，使用了数据库“UPDATE”，“SELECT”等命令
 ```
 
-## GPT API调用
+## GPT API调用(Core.cpp)
 我们提供了两套模型供使用，两套模型的调用方法不同。
 ### GPT-4o
 ```C++
@@ -504,7 +505,7 @@ void Core::getmessage()
 }
 ```
 
-## 获取股市指数的信息（图片形式）（Get_Url_Pic）
+## 获取股市指数的信息（图片形式）（Get_Url_Pic.cpp）
 使用的函数如下：
 ```C++
 //调用ScreenShot API截取指定网站图片，获取图片url
