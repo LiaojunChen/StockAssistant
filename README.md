@@ -59,30 +59,30 @@ graph LR
 # 测试用例
 ## 股市指数信息展示
 点击combobox，选择选项可切换内容
-![信息一览，左边为股市行情，右边为持仓的简明信息](/imgs/2024-05-18/oAxuXrtqsoyR9F80.png)
-![切换后展示](/imgs/2024-05-18/TMV4jM0zRyAGEbJI.png)
+![信息一览，左边为股市行情，右边为持仓的简明信息](https://github.com/LiaojunChen/StockAssistant/blob/main/img/pic_show.png)
+![切换后展示](https://github.com/LiaojunChen/StockAssistant/blob/main/img/pic_change.png)
 ## 搜索功能展示
-![图1](/imgs/2024-05-18/U0cuFlRv5gaV6eOi.png)
+![图1](https://github.com/LiaojunChen/StockAssistant/blob/main/img/search.png)
 输入股票代码，点击“查询”即可获得股票信息
 ### 代码鲁棒性
-![图2](/imgs/2024-05-18/isAQrEdD2FG5biDE.png)
+![图2](https://github.com/LiaojunChen/StockAssistant/blob/main/img/searchdebug.png)
 若输入错误的股票代码，系统会提示输入正确的股票代码
 ## 修改持仓功能展示
-![图3](/imgs/2024-05-18/gLqpxIn4x2LA97oY.png)
+![图3](https://github.com/LiaojunChen/StockAssistant/blob/main/img/changestock.png)
 可选择相应股票进行加仓减仓操作
 ### 代码鲁棒性
-![图4](/imgs/2024-05-18/xFJOredJX6St6VOf.png)
+![图4](https://github.com/LiaojunChen/StockAssistant/blob/main/img/change_debug.png)
 如果输入的减仓数大于持仓数，则会提醒用户
 ## 每日资讯展示
-![图5](/imgs/2024-05-18/94euGqf7QtB8Gp3G.png)
+![图5](https://github.com/LiaojunChen/StockAssistant/blob/main/img/news.png)
 结合GPT+网页新闻形成内容
 ## GPT交互展示
-![图6](/imgs/2024-05-18/N784VANYhd4Sirck.png)
+![图6](https://github.com/LiaojunChen/StockAssistant/blob/main/img/finassistant_ouput.png)
 在文本框输入内容，即可收到GPT回复
 ## FinAssistant与GPT-4o对比
 FinAssistant基于GPT-4-Turbo微调，加入了股票专业知识；GPT-4o使用的原生模型。
-![FinAssistant](/imgs/2024-05-18/q798rJk2tBBBzZch.png)
-![GPT-4o](/imgs/2024-05-18/13pcFtP99S6wFdhS.png)
+![FinAssistant](https://github.com/LiaojunChen/StockAssistant/blob/main/img/finassistant_ouput.png)
+![GPT-4o](https://github.com/LiaojunChen/StockAssistant/blob/main/img/4o_outpout.png)
 以上是在同样的prompt下，两个模型的回答，可以看到，GPT-4o有明显事实性错误，FinAssistant在知识库加持下更加准确严谨
 # 核心代码解释部分
 ## 股票信息爬虫（GetStock.cpp）
