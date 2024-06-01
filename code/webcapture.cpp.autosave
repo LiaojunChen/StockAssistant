@@ -1,0 +1,52 @@
+#include"webcapture.h"
+#include <QApplication>
+
+#include <QScreen>
+#include <QTimer>
+#include <QDebug>
+#include <QApplication>
+#include <QtWebKitWidgets/QWebView>
+#include <QScreen>
+#include <QTimer>
+#include <QDebug>
+#include<QUrl>
+#include<qdebug.h>
+#include <QString>
+#include <QDebug>
+#include<qdebug.h>
+#include <QDebug>
+class Screenshotter : public QObject {
+    Q_OBJECT
+
+public:
+    Screenshotter(const QString &url, const QRect &captureRect, const QString &outputFile)
+        : captureRect(captureRect), outputFile(outputFile) {
+        webView = new QWebView;
+        webView->resize(800, 600);
+        connect(webView, &QWebView::loadFinished, this, &Screenshotter::captureScreenshot);
+        webView->setUrl(QUrl(url));
+        webView->show();
+    }
+
+public slots:
+    void captureScreenshot(bool ok) {
+        if (!ok) {
+            qDebug() << "加载URL失败.";
+            return;
+        }
+
+        QTimer::singleShot(500, this, [this]() {
+            QScreen *screen = QApplication::primaryScreen();
+            QPixmap pixmap = screen->grabWindow(webView->winId(), captureRect.x(), captureRect.y(), captureRect.width(), captureRect.height());
+            pixmap.save(outputFile);
+            qDebug() << "截图已保存至" << outputFile;
+            webView->close();
+            QApplication::quit();
+        });
+    }
+
+private:
+    QWebView *webView;
+    QRect captureRect;
+    QString outputFile;
+};Screenshotter screenshotter("https://www.laohu8.com/quotes?quotesMarket=US", QRect(100, 100, 400, 300), "screenshot.png");

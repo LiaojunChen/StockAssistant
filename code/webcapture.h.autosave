@@ -1,0 +1,34 @@
+#ifndef WEBCAPTURE_H
+#define WEBCAPTURE_H
+#include <QScreen>
+#include <QTimer>
+#include <QDebug>
+#include <QApplication>
+#include <QtWebKitWidgets/QWebView>
+#include <QScreen>
+#include <QTimer>
+#include <QDebug>
+#include<QUrl>
+#include<qdebug.h>
+#include <QString>
+#include <QDebug>
+#include<qdebug.h>
+#include <QDebug>
+namespace Ui {
+class Webcapture;
+}
+
+class Screenshotter;
+class Webcapture : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit Webcapture(QWidget *parent = nullptr);
+    ~Webcapture();
+
+private slots:
+
+};
+class Screenshotter;
+#endif // WEBCAPTURE_H
