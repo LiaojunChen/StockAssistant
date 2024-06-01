@@ -85,7 +85,7 @@ FinAssistant基于GPT-4-Turbo微调，加入了股票专业知识；GPT-4o使用
 ![GPT-4o](https://github.com/LiaojunChen/StockAssistant/blob/main/img/4o_outpout.png)
 以上是在同样的prompt下，两个模型的回答，可以看到，GPT-4o有明显事实性错误，FinAssistant在知识库加持下更加准确严谨
 # 核心代码解释部分
-因篇幅较长，见代码解释.md
+因篇幅较长，见核心代码解释.md
 }
     return ;
 }
