@@ -14,11 +14,11 @@
   
   响应快速，但财经专业知识较匮乏
 - **FinAssistant**
-   
- 基于GPT-4o在OpenAI Platform上微调，加入了自己准备的财经知识，在财经领域专业知识更丰富，但响应较慢
+
+  基于GPT-4o在OpenAI Platform上微调，加入了自己准备的财经知识，在财经领域专业知识更丰富，但响应较慢
 - **Llama-3-Chinese-8B-Instruct**
-   
- llama3-8B的中文特调版，部署在本地推理，供尝鲜使用
+
+  llama3-8B的中文特调版，部署在本地推理，供尝鲜使用
  
 <h1 id="2">功能介绍</h1>
 
