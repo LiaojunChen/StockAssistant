@@ -1,5 +1,6 @@
 # StockAssistant
  [项目特点](#1) 
+ 
 [功能介绍](#2)  
  [代码结构](#3)  
   [功能展示](#4)  
@@ -56,6 +57,7 @@ graph LR
 <h1 id="4"> 功能展示</h1>
 
 ## 模型选择展示
+![https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png](https://github.com/LiaojunChen/StockAssistant/blob/main/img/selection.png)
 ## 股市指数信息展示
 点击combobox，选择选项可切换内容
 ![信息一览，左边为股市行情，右边为持仓的简明信息](https://github.com/LiaojunChen/StockAssistant/blob/main/img/pic_show.png)
@@ -81,6 +83,8 @@ graph LR
 ![图5](https://github.com/LiaojunChen/StockAssistant/blob/main/img/news.png)
 ## FinAssistant持仓分析展示
 软件启动后，会先用爬虫爬取持仓的最新股价，计算收益，FinAssistant会根据这些信息给出持仓分析和建议
+![https://github.com/LiaojunChen/StockAssistant/blob/main/img/news.png](https://github.com/LiaojunChen/StockAssistant/blob/main/img/any1.png)
+![https://github.com/LiaojunChen/StockAssistant/blob/main/img/new2s.png](https://github.com/LiaojunChen/StockAssistant/blob/main/img/any2.png)
 ## GPT交互展示
 在文本框输入内容，即可收到GPT回复
 ![图6](https://github.com/LiaojunChen/StockAssistant/blob/main/img/finassistant_ouput.png)
@@ -90,7 +94,9 @@ FinAssistant基于GPT-4-Turbo微调，加入了股票专业知识；GPT-4o使用
 ![GPT-4o](https://github.com/LiaojunChen/StockAssistant/blob/main/img/4o_outpout.png)
 
 以上是在同样的prompt下，两个模型的回答，可以看到，GPT-4o有明显事实性错误，FinAssistant在知识库加持下更加准确严谨
-
+## 邮件保存输出框内容
+![mail]((https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png))
+https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png
 <h1 id="5"> 与同花顺功能对比</h1>
 
 
