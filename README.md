@@ -1,6 +1,5 @@
 # StockAssistant
  [项目特点](#1) 
- 
 [功能介绍](#2)  
  [代码结构](#3)  
   [功能展示](#4)  
@@ -56,8 +55,7 @@ graph LR
 
 <h1 id="4"> 功能展示</h1>
 
-## 模型选择展示
-![https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png](https://github.com/LiaojunChen/StockAssistant/blob/main/img/selection.png)
+
 ## 股市指数信息展示
 点击combobox，选择选项可切换内容
 ![信息一览，左边为股市行情，右边为持仓的简明信息](https://github.com/LiaojunChen/StockAssistant/blob/main/img/pic_show.png)
