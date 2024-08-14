@@ -1,5 +1,5 @@
 # StockAssistant
- [项目特点](#1) 
+</br> [项目特点](#1) </br>
 [功能介绍](#2)  
  [代码结构](#3)  
   [功能展示](#4)  
@@ -93,8 +93,7 @@ FinAssistant基于GPT-4-Turbo微调，加入了股票专业知识；GPT-4o使用
 
 以上是在同样的prompt下，两个模型的回答，可以看到，GPT-4o有明显事实性错误，FinAssistant在知识库加持下更加准确严谨
 ## 邮件保存输出框内容
-![mail]((https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png))
-https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png
+![mail](https://github.com/LiaojunChen/StockAssistant/blob/main/img/mail.png)
 <h1 id="5"> 与同花顺功能对比</h1>
 
 
